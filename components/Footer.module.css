@@ -1,0 +1,113 @@
+.footer {
+  background-color: var(--footer-bg);
+  color: #ffffff;
+  padding-top: 4rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.footerTop {
+  padding-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.logoImg {
+  transition: var(--transition);
+  background-color: transparent;
+}
+
+.logoText {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: block;
+}
+
+.desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.colTitle {
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  text-transform: none;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+}
+
+.linksList li {
+  margin-bottom: 0.8rem;
+}
+
+.linksList a {
+  color: #ffffff;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.linksList a:hover {
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.warningDesc {
+  color: #ffffff;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footerBottom {
+  padding: 2rem 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.copyrightText {
+  color: #ffffff;
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .desc {
+    text-align: left;
+  }
+  .logoWrapper {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

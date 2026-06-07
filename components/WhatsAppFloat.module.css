@@ -1,0 +1,99 @@
+.floatWrapper {
+  position: fixed;
+  left: 20px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+}
+
+.floatBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-decoration: none;
+}
+
+.waIcon {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.label {
+  position: absolute;
+  left: 60px;
+  white-space: nowrap;
+  background-color: #1a202c;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover effects */
+.floatBtn:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+  box-shadow: 0 6px 20px rgba(18, 140, 126, 0.5);
+}
+
+.floatBtn:hover .waIcon {
+  transform: rotate(15deg);
+}
+
+.floatBtn:hover .label {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* Color variations for vertical stack visual distinction */
+.btnGetId {
+  background-color: #25d366;
+}
+.btnPayments {
+  background-color: #1ebd5d;
+}
+.btnSupport {
+  background-color: #0ea148;
+}
+
+@media (max-width: 768px) {
+  .floatWrapper {
+    left: 15px;
+    bottom: 20px;
+    gap: 10px;
+  }
+  
+  .floatBtn {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .waIcon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .label {
+    left: 54px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+}

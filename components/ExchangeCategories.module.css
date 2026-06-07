@@ -1,0 +1,104 @@
+.section {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  padding: 2.2rem 1.5rem;
+  box-shadow: var(--shadow-dark);
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.sectionHeader {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+.sectionHeader h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  text-transform: uppercase;
+}
+
+.sectionHeader span {
+  color: var(--primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cardOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(11, 30, 54, 0.9) 0%, rgba(11, 30, 54, 0.3) 50%, rgba(11, 30, 54, 0) 100%);
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.cardEmoji {
+  font-size: 3rem;
+  margin-bottom: auto;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  opacity: 0.85;
+}
+
+.badge {
+  background-color: #00509d; /* Blue badge from screenshots */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  border-radius: 4px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    height: 180px;
+  }
+}

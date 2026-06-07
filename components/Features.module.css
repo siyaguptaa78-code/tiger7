@@ -1,0 +1,86 @@
+.featuresSection {
+  background-color: var(--background);
+  position: relative;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  background: var(--secondary);
+  padding: 2.2rem 1.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.15);
+  border-color: var(--primary);
+}
+
+.icon {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  font-size: 1.35rem;
+  color: var(--primary);
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  font-family: var(--font-fjalla), sans-serif;
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-family: var(--font-raleway), sans-serif;
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.largeCta {
+  font-size: 1.15rem;
+  padding: 16px 36px;
+  border-radius: 50px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .largeCta {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px 20px;
+  }
+}

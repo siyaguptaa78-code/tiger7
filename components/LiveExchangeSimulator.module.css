@@ -1,0 +1,195 @@
+.section {
+  background-color: var(--secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-dark);
+  border: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+.titleWrapper h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.titleWrapper span {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.exchangeHeader {
+  background-color: #3b2314; /* Dark brown header from the screenshot */
+  color: #ffffff;
+  padding: 8px 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-radius: 4px 4px 0 0;
+  letter-spacing: 1px;
+}
+
+.matchList {
+  display: flex;
+  flex-direction: column;
+}
+
+.matchRow {
+  background-color: var(--secondary);
+  border: 1px solid var(--border);
+  border-top: none;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.matchRow:hover {
+  background-color: var(--secondary-hover);
+}
+
+.matchMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.matchTime {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.matchIndicators {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.indicator {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #10b981; /* active green */
+  border-radius: 50%;
+}
+
+.matchIcons {
+  display: flex;
+  gap: 4px;
+}
+
+.badgeIcon {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.bm { background-color: #4b5563; color: white; }
+.f { background-color: #b91c1c; color: white; }
+.p { background-color: #d97706; color: white; }
+
+.matchDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.teamName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.oddsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 6px;
+  width: 480px;
+  flex-shrink: 0;
+}
+
+.oddsBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+  user-select: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.oddsBtn:active {
+  transform: scale(0.95);
+}
+
+.backBtn {
+  background-color: #a5d8ff; /* Sky blue BACK buttons from screenshot */
+  color: #004b87;
+  border: 1px solid #74c0fc;
+}
+
+.backBtn:hover {
+  background-color: #74c0fc;
+}
+
+.layBtn {
+  background-color: #ffc9c9; /* Pink LAY buttons from screenshot */
+  color: #c92a2a;
+  border: 1px solid #ffa8a8;
+}
+
+.layBtn:hover {
+  background-color: #ffa8a8;
+}
+
+.emptyOdds {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  cursor: not-allowed;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .matchDetails {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .oddsGrid {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .oddsGrid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+  }
+  
+  .oddsBtn {
+    font-size: 0.8rem;
+    height: 38px;
+  }
+}

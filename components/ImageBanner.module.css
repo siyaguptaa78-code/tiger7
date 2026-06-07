@@ -1,0 +1,22 @@
+.section {
+  background-color: var(--background);
+  padding: 2rem 0;
+}
+
+.wrapper {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border: 1px solid var(--border);
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.wrapper:hover .bannerImage {
+  transform: scale(1.02);
+}
