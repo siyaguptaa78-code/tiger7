@@ -25,8 +25,8 @@ export const SITE_CONFIG = {
   },
 
   description: "Get your official Tiger365 exchange ID instantly on WhatsApp. 24/7 customer support, fast UPI/Bank withdrawals, lowest deposits, and live sports and casino markets.",
-  whatsappNumber: "918872189471",
-  whatsappLink: "https://wa.me/918872189471",
+  whatsappNumber: "916026703858",
+  whatsappLink: "https://wa.me/916026703858",
   url: "https://tiger365.buzz",
 
   // ==========================================
